@@ -1,19 +1,170 @@
-/* Basic Styling - You'll need to customize this extensively */
+/* Basic Styling - Closer to the reference image */
+
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif; /* Adjust font as needed */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333; /* Dark text color */
 }
 
+/* Header */
 header {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-image: url('your-header-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
+    padding: 100px 0; /* Adjust padding for desired height */
 }
 
-h1, h2, h3 {
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-/* ... (Add more styles for other sections, project boxes, form, etc.) */
+header nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Welcome Section */
+#welcome {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#welcome h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.project:hover {
+    background-color: #e0e0e0;
+}
+
+/* About Brand Section */
+#about-brand {
+    padding: 50px 0;
+}
+
+#about-brand .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about-brand img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 30px;
+}
+
+#about-brand .content h4 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#about-brand .content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about-brand .content button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Social Section */
+#social {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+}
+
+#contact h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#contact button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+}
