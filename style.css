@@ -1,0 +1,19 @@
+/* Basic Styling - You'll need to customize this extensively */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* ... (Add more styles for other sections, project boxes, form, etc.) */
