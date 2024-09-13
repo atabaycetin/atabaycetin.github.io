@@ -14,6 +14,7 @@ header {
     background-position: center;
     color: white;
     text-align: center;
+    -webkit-text-fill-color: #333;
     padding: 100px 0; 
 }
 
@@ -34,7 +35,7 @@ header nav li {
 }
 
 header nav a {
-    color: white;
+    color: #333;
     text-decoration: none;
 }
 
@@ -181,25 +182,28 @@ footer {
 
 /* Add outline boxes to sections */
 section {
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
+    width: 800px; /* Fixed width for all screen sizes */
     border-radius: 10px; 
     padding: 30px; 
-    margin-bottom: 30px;
+    margin: 30px auto; /* Centered */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
+/* Welcome Section Adjustments */
 #welcome {
     padding: 50px 30px; 
 }
 
+/* About Brand Section Adjustments */
 #about-brand {
     padding: 50px 30px; 
 }
 
+/* Contact Section Adjustments */
 #contact {
     padding: 50px 30px; 
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -238,6 +242,11 @@ section {
     .form-group input[type="text"],
     .form-group input[type="email"] {
         margin-bottom: 10px;
+    }
+
+    section {
+        width: 100%; /* Full width for smaller screens */
+        margin: 0 15px; /* Add margin to prevent sections from touching edges */
     }
 }
 
