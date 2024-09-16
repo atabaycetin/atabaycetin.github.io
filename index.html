@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Atabay Cetin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <button class="btn-toggle">Toggle Dark Mode</button>
+
+    <header>
+        <h1>Taha Atabay Cetin</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <h2 href="https://github.com/atabaycetin/c-projects" >MY PROJECTS</h2>
+        <div class="projects">
+            <div class="project"><a href="https://github.com/atabaycetin/c-projects" class="links">C</a></div>
+            <div class="project"><a href="https://github.com/search?q=owner%3Aatabaycetin+java-project&type=repositories" class="links">Java</a></div>
+            <div class="project"><a href="https://github.com/atabaycetin/c-projects" class="links">Bash</a></div>
+            <div class="project"><a href="https://github.com/atabaycetin/c-projects" class="links">SQL</a></div>
+            <div class="project"><a href="https://github.com/atabaycetin/c-projects" class="links">Python</a></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <img src="profile-picture.png" alt="Brand Image">
+            <div class="content">
+                <h4>More About Me</h4>
+                <p>My main goal is to become a machine learning engineer. In order to get to that level step by step, I'm planning to firstly work as a data analyst, and later on, work as a data scientist. To improve myself in the field, I've completed courses on data analysis, programming and databases. To get the certificates for the courses, I completed 5 projects for each course. Also, to be a better team player, I attended Young Executive Academy. </p>
+            </div>  
+        </div>
+    </section>
+
+    <section id="social">
+        <h3>Follow me on socials</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/atabay.cetin/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/taha-atabay-cetin/"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </section>
+    <iframe class="contact" src="https://docs.google.com/forms/d/e/1FAIpQLSeydyzRXM61dHS91WVSA-_16x8ELjwwY7BpaJCcZqOVtvIFfA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    
+
+    <footer>
+        <p>&copy; 2024 Taha Atabay CETIN</p>
+        <a href="https://www.linkedin.com/in/taha-atabay-cetin/">Linkedin</a>
+        <a href="https://www.instagram.com/atabay.cetin/">Instagram</a>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> 
+    <script>
+        const btn = document.querySelector('.btn-toggle');
+
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            const projectList = document.querySelectorAll('.project');
+            projectList.forEach(project => {
+                if (project.style.backgroundColor === 'rgb(67, 67, 67)') {
+                    project.style.backgroundColor = '#f0f0f0'
+                }
+                else {
+                    project.style.backgroundColor = '#434343';
+                }
+
+            });
+            const footer = document.querySelector('footer');
+            if (footer.style.backgroundColor === 'rgb(67, 67, 67)') {
+                footer.style.backgroundColor = '#f0f0f0';
+            } else {
+                footer.style.backgroundColor = '#434343';
+    }
+        })
+    </script>
+</body>
+</html>
