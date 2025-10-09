@@ -53,8 +53,13 @@
             <a href="https://www.linkedin.com/in/taha-atabay-cetin/"><i class="fa fa-linkedin"></i></a>
         </div>
     </section>
-    <iframe class="contact" src="https://docs.google.com/forms/d/e/1FAIpQLSeydyzRXM61dHS91WVSA-_16x8ELjwwY7BpaJCcZqOVtvIFfA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    
+    <section id="contact">
+        <iframe class="contact"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeydyzRXM61dHS91WVSA-_16x8ELjwwY7BpaJCcZqOVtvIFfA/viewform?embedded=true"
+            width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">
+            Loading…
+        </iframe>
+    </section>
 
     <footer>
         <p>&copy; 2024 Taha Atabay CETIN</p>
@@ -63,40 +68,18 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> 
-    <script>
+        <script>
         const btn = document.querySelector('.btn-toggle');
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === "dark") document.body.classList.add('dark-theme');
 
-        if (localStorage.getItem("theme" === "dark")) {
+        btn.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
-        }
-
-        btn.addEventListener('click', function() {
-            document.body.classList.toggle('dark-theme');
-
-            if (localStorage.getItem("theme") === "light") {
-                localStorage.setItem("theme", "dark");
-            } else {
-                localStorage.setItem("theme", "light");
-            }
-
-            const projectList = document.querySelectorAll('.project');
-            projectList.forEach(project => {
-                if (project.style.backgroundColor === 'rgb(67, 67, 67)') {
-                    project.style.backgroundColor = '#f0f0f0'
-                }
-                else {
-                    project.style.backgroundColor = '#434343';
-                }
-
-            });
-            const footer = document.querySelector('footer');
-            if (footer.style.backgroundColor === 'rgb(67, 67, 67)') {
-                footer.style.backgroundColor = '#f0f0f0';
-            } else {
-                footer.style.backgroundColor = '#434343';
-    }
-        })
-    </script>
+            localStorage.setItem("theme",
+            document.body.classList.contains('dark-theme') ? "dark" : "light"
+            );
+        });
+        </script>
 </body>
 
 </html>
